@@ -54,8 +54,7 @@ class CustomerController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'message' => $e->getMessage()
             ], 200);
         }
     }
@@ -112,8 +111,7 @@ class CustomerController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'message' => $e->getMessage()
             ], 200);
         }
     }
@@ -149,8 +147,7 @@ class CustomerController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'message' => $e->getMessage()
             ], 200);
         }
     }
@@ -215,8 +212,7 @@ class CustomerController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'reason' => 'Something went wrong',
             ], 200);
         }
     }
@@ -246,8 +242,7 @@ class CustomerController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'message' => $e->getMessage()
             ], 200);
         }
     }
@@ -295,7 +290,7 @@ class CustomerController extends Controller
             return response()->json([
                 'status' => false,
                 'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'mess' => $e->getMessage()
             ], 200);
         }
     }

@@ -22,7 +22,6 @@ class AdminController extends Controller
                 return response()->json([
                     'status' => false,
                     'message' => 'User does not exist',
-                    'reason' => 'User does not exist',
                     'data' => []
                 ], 200);
             }
@@ -38,8 +37,7 @@ class AdminController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Something went wrong',
-                'reason' => $e->getMessage()
+                'message' => $e->getMessage()
             ], 200);
         }
     }
