@@ -29,9 +29,11 @@ class CustomerController extends Controller
             }
 
             $customerConatiner = [];
+            $serialNumber = 1;
             foreach ($customers as $key => $customer) {
                 array_push($customerConatiner, [
                     'customerId' => $customer->id,
+                    'serialNumber' => $serialNumber,
                     'customerName' => $customer->name,
                     'customerEmail' => $customer->email,
                     'customerDOB' => $customer->date_of_birth,
@@ -39,6 +41,7 @@ class CustomerController extends Controller
                     'customerJoiningDate' => $customer->joining_date,
                     'customerAddress' => $customer->residental_address
                 ]);
+                $serialNumber++;
             }
 
             return response()->json([
